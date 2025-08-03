@@ -6,14 +6,20 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "setup-mysql": "node scripts/setup-mysql.js",
+    "sync-data": "node scripts/sync-data.js",
+    "sync-continuous": "node scripts/sync-data.js --continuous",
+    "sync-interval": "node scripts/sync-data.js --continuous --interval=10"
   },
   "dependencies": {
     "@auth/core": "^0.34.2",
+    "dotenv": "^17.2.1",
     "google-auth-library": "^10.2.0",
     "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.536.0",
     "mongoose": "^8.17.0",
+    "mysql2": "^3.14.3",
     "next": "15.3.2",
     "next-auth": "^4.24.11",
     "react": "^19.0.0",
