@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import Layout from '../../components/Layout';
-import QueueDashboard from '../../components/QueueDashboard';
+import AccessControlPanel from '../../components/AccessControlPanel';
 import { User } from '../../lib/types';
 
-export default function Dashboard() {
+export default function AccessControl() {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -35,8 +35,8 @@ export default function Dashboard() {
   }
 
   return (
-    <Layout user={user || undefined} currentPage="dashboard">
-      <QueueDashboard />
+    <Layout user={user || undefined} currentPage="access-control">
+      <AccessControlPanel />
     </Layout>
   );
 }

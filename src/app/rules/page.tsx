@@ -1,11 +1,12 @@
+// src/app/rules/page.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
 import Layout from '../../components/Layout';
-import QueueDashboard from '../../components/QueueDashboard';
+import RulesEngine from '../../components/RulesEngine';
 import { User } from '../../lib/types';
 
-export default function Dashboard() {
+export default function Rules() {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -35,8 +36,8 @@ export default function Dashboard() {
   }
 
   return (
-    <Layout user={user || undefined} currentPage="dashboard">
-      <QueueDashboard />
+    <Layout user={user || undefined} currentPage="rules">
+      <RulesEngine />
     </Layout>
   );
 }
