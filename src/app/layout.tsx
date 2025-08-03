@@ -3,7 +3,7 @@ import './globals.css';
 import SessionProvider from '../components/SessionProvider';
 
 export const metadata: Metadata = {
-  title: 'Auth App',
+  title: 'Queue Manager',
   description: 'Next.js Authentication App with Google OAuth',
 };
 
